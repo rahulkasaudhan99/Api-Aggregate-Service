@@ -8,7 +8,6 @@ Requirements
 Steps to run:
 
 1. Get following docker image running in docker container
-    https://hub.docker.com/r/xyzassessment/backend-services
 
 2. IDE setup 
    - Clone project in STS fromgithub repository : ""
@@ -27,7 +26,7 @@ Steps to run:
 
 5. Open Postman 
     - Do a GET request on below uri
-	  http://localhost:8080/aggregation?pricing=CR,NR,PN,RN,BN&track=123456881,109347263,109347272,109347282,109347283&shipments=123456884,109347252,109347292,109347282,109347242
+	  http://localhost:8080/aggregation?shipmentsOrderNumbers=987654321,123456789&trackOrderNumbers=987654321,123456789&pricingCountryCodes=NL,CN
 	
 	
 	
