@@ -1,0 +1,16 @@
+Design Decision Document
+
+1. For Ensuring response time less than 5 seconds for huge requests:
+
+	- Firstly implemented multithreading and with help of CompletableFuture tasks on basis of number of requests combinely for all API which resulted delay in responses for    other APIs if one is down.  
+
+	- Implemented different threads for each API to run requests in parallel for external api using Callable tasks created so that it runs parallely and get results once completed.
+
+
+2. For External API down scenario:
+
+	- To avoid cascading failure implemented hystrix circuit breaker for calling external api.
+
+	- To ensure proper response used Fallback method using hystrix circuit breaker
+
+	
